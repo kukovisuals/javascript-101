@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>nav sticky</title>
+	<style type="text/css">
+		
+		header{
+			height: 100px;
+			border:1px solid #000;
+		}
+		.logo{
+			width: 25%;float: left;
+		}
+		.opcions{
+			width: 50%;
+		}
+		.sticky{
+			-webkit-transition: 1s;
+		  -moz-transition: 1s;
+		  -ms-transition: 1s;
+		  -o-transition: 1s;
+		  transition: 1s;
+			background-color: #18dfff;
+		}
+
+	</style>
+</head>
+<body>
+	<header id="navbar">
+		<div>
+			<div class="logo">
+				<h4>LOGO</h4>
+			</div>
+			<div class="opcions">
+				<ul>
+					<li>news</li>
+					<li>shop</li>
+					<li>crack</li>
+					<li>contact</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<section style="height: 1000px">
+	</section>
+
+	<script type="text/javascript">
+		window.onscroll = function() {myStickyNav()};
+
+		const navbar = document.getElementById("navbar");
+		const sticky = navbar.offsetTop;
+
+		function myStickyNav() {
+		  if (window.pageYOffset >= sticky) {
+		    navbar.classList.add("sticky")
+		  } else {
+		    navbar.classList.remove("sticky");
+		  }
+		}
+	</script>
+</body>
+</html>
